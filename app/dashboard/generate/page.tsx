@@ -71,7 +71,7 @@ export default function GeneratePage() {
       <div style={{ padding: 24, maxWidth: 800 }}>
 
         {/* Mode toggle */}
-        <div style={{ display: 'flex', gap: 4, background: 'var(--bg3)', padding: 4, borderRadius: 8, border: '1px solid var(--border)', display: 'inline-flex', marginBottom: 24 }}>
+        <div style={{ display: 'flex', gap: 4, background: 'var(--bg3)', padding: 4, borderRadius: 8, border: '1px solid var(--border)', marginBottom: 24 }}>
           {['manual', 'auto'].map(m => (
             <button key={m} onClick={() => setMode(m as any)}
               style={{ padding: '6px 20px', borderRadius: 6, border: 'none', fontSize: 12, cursor: 'pointer', fontWeight: 500,
