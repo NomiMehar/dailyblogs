@@ -16,7 +16,7 @@ export function generateSchemaMarkup(post: {
   const postUrl = `${siteUrl}/blog/${post.slug}`
 
   // Extract FAQ items from content
-  const faqMatches = [...(post.content?.matchAll(/<h3 class="faq-q">(.*?)<\/h3>\s*<p class="faq-a">(.*?)<\/p>/gs) || [])]
+  const faqMatches = Array.from(post.content?.matchAll(/<h3 class="faq-q">([\s\S]*?)<\/h3>\s*<p class="faq-a">([\s\S]*?)<\/p>/g) || [])
   const faqSchema = faqMatches.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
