@@ -63,7 +63,7 @@ export default function SettingsPage() {
           <Section title="Site Configuration">
             <Row label="Site Name" desc="Displayed in header and meta tags">
               <input value={settings.siteName} onChange={e => set('siteName', e.target.value)}
-                placeholder="AutoBlog AI"
+                placeholder="Blogs Dairy"
                 style={{ width: 180, padding: '7px 10px', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 7, color: 'var(--text)', fontSize: 12, outline: 'none' }} />
             </Row>
             <Row label="Site URL" desc="Your production domain">

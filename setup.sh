@@ -1,12 +1,12 @@
 #!/bin/bash
-# AutoBlog AI — One-click setup script
+# Blogs Dairy — One-click setup script
 # Run: chmod +x setup.sh && ./setup.sh
 
 set -e
 
 echo ""
 echo "╔═══════════════════════════════════════╗"
-echo "║        AutoBlog AI Setup              ║"
+echo "║        Blogs Dairy Setup              ║"
 echo "╚═══════════════════════════════════════╝"
 echo ""
 

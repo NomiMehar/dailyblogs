@@ -37,7 +37,7 @@ export default async function CategoryPage({ params }: Props) {
     .order('published_at', { ascending: false })
     .limit(30)
 
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI'
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy'
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>

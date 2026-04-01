@@ -34,7 +34,7 @@ function LoginForm() {
       <div style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 16, padding: 40, width: '100%', maxWidth: 380 }}>
         <div style={{ textAlign: 'center', marginBottom: 32 }}>
           <div style={{ width: 48, height: 48, background: 'var(--amber)', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, margin: '0 auto 12px' }}>✦</div>
-          <h1 style={{ fontFamily: 'var(--font-playfair)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--amber)', marginBottom: 6 }}>AutoBlog AI</h1>
+          <h1 style={{ fontFamily: 'var(--font-playfair)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--amber)', marginBottom: 6 }}>Blogs Dairy</h1>
           <p style={{ fontSize: 13, color: 'var(--text2)' }}>Sign in to your dashboard</p>
         </div>
 

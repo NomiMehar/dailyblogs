@@ -1,4 +1,4 @@
-# AutoBlog AI — Complete Setup Guide
+# Blogs Dairy — Complete Setup Guide
 
 > Fully autonomous AI blog: generates SEO-optimized posts 4× daily, publishes automatically, earns money through ads and affiliates. Zero human effort after setup.
 
@@ -26,12 +26,12 @@ npx vercel
 
 ## Required API Keys
 
-| Key | Where to get | Cost |
-|---|---|---|
-| ANTHROPIC_API_KEY | console.anthropic.com | Free credits (~$5) |
-| SUPABASE keys (3) | supabase.com → Settings → API | Free tier |
-| ADMIN_PASSWORD | Make one up | — |
-| CRON_SECRET | Make one up | — |
+| Key               | Where to get                  | Cost               |
+| ----------------- | ----------------------------- | ------------------ |
+| ANTHROPIC_API_KEY | console.anthropic.com         | Free credits (~$5) |
+| SUPABASE keys (3) | supabase.com → Settings → API | Free tier          |
+| ADMIN_PASSWORD    | Make one up                   | —                  |
+| CRON_SECRET       | Make one up                   | —                  |
 
 Pollinations.ai (images), Google Trends, Reddit, HackerNews — all free, no keys needed.
 
@@ -81,6 +81,7 @@ components/
 ## How Posts Are Generated
 
 Every 6 hours Vercel fires a cron:
+
 1. Fetch trending topics (Google Trends + Reddit + HN)
 2. Pick best unused topic
 3. Claude writes 3,000 word article (H2/H3, FAQs, keywords)
@@ -91,11 +92,11 @@ Every 6 hours Vercel fires a cron:
 ## Revenue Path
 
 | Monthly Visitors | Est. Monthly Revenue |
-|---|---|
-| 10,000 | $200–500 |
-| 50,000 | $1,500–3,000 |
-| 100,000 | $3,000–8,000 |
-| 500,000 | $15,000–40,000 |
+| ---------------- | -------------------- |
+| 10,000           | $200–500             |
+| 50,000           | $1,500–3,000         |
+| 100,000          | $3,000–8,000         |
+| 500,000          | $15,000–40,000       |
 
 Revenue streams: Google AdSense (auto) + Amazon Affiliates (auto) + Sponsorships + Newsletter
 
@@ -109,6 +110,7 @@ Revenue streams: Google AdSense (auto) + Amazon Affiliates (auto) + Sponsorships
 ## Changing Post Frequency
 
 Edit vercel.json:
+
 ```json
 "schedule": "0 */6 * * *"   // 4 posts/day (default)
 "schedule": "0 */3 * * *"   // 8 posts/day

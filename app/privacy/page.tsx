@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 }
 
 export default function PrivacyPage() {
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI'
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy'
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'
 
   return (

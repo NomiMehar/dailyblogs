@@ -12,7 +12,7 @@ export function generateSchemaMarkup(post: {
   content: string
 }) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI'
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy'
   const postUrl = `${siteUrl}/blog/${post.slug}`
 
   // Extract FAQ items from content

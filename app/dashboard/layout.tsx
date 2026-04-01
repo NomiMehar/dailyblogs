@@ -23,7 +23,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <aside style={{ width: 220, background: 'var(--bg2)', borderRight: '1px solid var(--border)', display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
         <div style={{ padding: '18px 16px', borderBottom: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{ width: 30, height: 30, background: 'var(--amber)', borderRadius: 7, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>✦</div>
-          <span style={{ fontFamily: 'var(--font-playfair)', fontSize: 15, fontWeight: 700, color: 'var(--amber)' }}>AutoBlog AI</span>
+          <span style={{ fontFamily: 'var(--font-playfair)', fontSize: 15, fontWeight: 700, color: 'var(--amber)' }}>Blogs Dairy</span>
         </div>
 
         <nav style={{ padding: '12px 8px', flex: 1 }}>

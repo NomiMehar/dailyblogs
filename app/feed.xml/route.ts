@@ -5,7 +5,7 @@ export const revalidate = 3600
 
 export async function GET() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI'
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy'
   const siteDesc = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || 'AI-powered blog'
 
   const { data: posts } = await supabase

@@ -22,7 +22,7 @@ function SearchResults() {
     return () => clearTimeout(timer)
   }, [query])
 
-  const siteName = 'AutoBlog AI'
+  const siteName = 'Blogs Dairy'
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>

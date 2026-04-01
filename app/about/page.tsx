@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI'
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy'
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>

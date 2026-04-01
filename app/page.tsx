@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 import SubscribeForm from './SubscribeForm'
 
 export const metadata: Metadata = {
-  title: { absolute: `${process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI'} — AI-Powered Daily Blog` },
+  title: { absolute: `${process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy'} — AI-Powered Daily Blog` },
   description: process.env.NEXT_PUBLIC_SITE_DESCRIPTION,
   alternates: { types: { 'application/rss+xml': '/feed.xml' } },
 }
@@ -29,7 +29,7 @@ export default async function HomePage() {
   const posts = await getPosts()
   const featured = posts.slice(0, 3)
   const latest = posts.slice(3)
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI'
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy'
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>

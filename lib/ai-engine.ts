@@ -78,7 +78,7 @@ async function callOpenRouter(system: string, user: string): Promise<string> {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
       'HTTP-Referer': process.env.NEXT_PUBLIC_SITE_URL || 'https://localhost:3000',
-      'X-Title': process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI',
+      'X-Title': process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy',
     },
     body: JSON.stringify({
       model: 'meta-llama/llama-3.1-8b-instruct:free',

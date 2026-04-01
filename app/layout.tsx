@@ -17,14 +17,14 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI',
-    template: `%s | ${process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI'}`,
+    default: process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy',
+    template: `%s | ${process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy'}`,
   },
   description: process.env.NEXT_PUBLIC_SITE_DESCRIPTION || 'AI-powered blog covering tech, AI, finance, and more',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'),
   openGraph: {
     type: 'website',
-    siteName: process.env.NEXT_PUBLIC_SITE_NAME || 'AutoBlog AI',
+    siteName: process.env.NEXT_PUBLIC_SITE_NAME || 'Blogs Dairy',
   },
   robots: { index: true, follow: true },
   alternates: { canonical: '/' },
