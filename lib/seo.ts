@@ -19,7 +19,7 @@ export function generateSchemaMarkup(post: {
   const faqMatches = Array.from(post.content?.matchAll(/<h3 class="faq-q">([\s\S]*?)<\/h3>\s*<p class="faq-a">([\s\S]*?)<\/p>/g) || [])
   const faqSchema = faqMatches.length > 0 ? {
     '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    '@type': 'FAQPage', 
     mainEntity: faqMatches.map(m => ({
       '@type': 'Question',
       name: m[1].replace(/<[^>]*>/g, ''),
