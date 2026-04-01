@@ -14,7 +14,7 @@ export default function SettingsPage() {
     schemaMarkup: true, openGraph: true, canonicalUrls: true, sitemapPing: true,
     googleTrends: true, reddit: true, hackernews: true, twitter: false,
     postsPerDay: '1', minSeoScore: '85', wordCount: '3000',
-    adsenseId: '', anthropicKey: '', siteName: '', siteUrl: '',
+    adsenseId: '', anthropicKey: '', groqKey: '', openrouterKey: '', siteName: '', siteUrl: '',
   })
   const [saved, setSaved] = useState(false)
 
