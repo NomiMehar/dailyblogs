@@ -15,7 +15,7 @@ export async function fetchGoogleTrends(): Promise<TrendingTopic[]> {
       next: { revalidate: 7200 },
     })
     const text = await res.text()
-    const titles = [...text.matchAll(/<title><!\[CDATA\[(.+?)\]\]><\/title>/g)]
+    const titles = Array.from(text.matchAll(/<title><!\[CDATA\[(.+?)\]\]><\/title>/g))
       .map(m => m[1])
       .filter(t => t.length > 5 && !t.includes('Daily Search Trends'))
       .slice(0, 15)
