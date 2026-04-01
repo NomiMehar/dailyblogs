@@ -96,7 +96,7 @@ export default function DashboardPage() {
       <div style={{ padding: 24 }}>
 
         {/* Topic input */}
-        <div style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
+        <div style={{ display: 'flex', gap: 10, marginBottom: 12 }}>
           <input value={topicInput} onChange={e => setTopicInput(e.target.value)}
             placeholder="Optional: Enter a specific topic, or leave blank to auto-pick trending topic..."
             style={{ flex: 1, padding: '9px 14px', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 8, color: 'var(--text)', fontSize: 13, outline: 'none' }} />
@@ -104,6 +104,12 @@ export default function DashboardPage() {
             style={{ padding: '9px 20px', background: generating ? '#333' : '#FFA52820', color: 'var(--amber)', border: '1px solid #FFA52840', borderRadius: 8, fontSize: 13, fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap' }}>
             ⚡ Generate Post
           </button>
+        </div>
+
+        {/* Provider hint */}
+        <div style={{ fontSize: 11, color: 'var(--text2)', marginBottom: 20, padding: '8px 12px', background: 'var(--bg3)', borderRadius: 7, border: '1px solid var(--border)' }}>
+          💡 <strong style={{ color: 'var(--text)' }}>Free AI:</strong> Add <code style={{ background: 'var(--bg)', padding: '1px 5px', borderRadius: 4, color: 'var(--amber)' }}>GROQ_API_KEY</code> to .env.local for unlimited free generation.
+          Get one in 30 seconds at <a href="https://console.groq.com" target="_blank" rel="noreferrer" style={{ color: 'var(--amber)' }}>console.groq.com</a> — no credit card needed.
         </div>
 
         {/* Generation progress */}

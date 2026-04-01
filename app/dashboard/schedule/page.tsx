@@ -11,7 +11,7 @@ const SCHEDULED = [
 ]
 
 export default function SchedulePage() {
-  const [postsPerDay, setPostsPerDay] = useState('4')
+  const [postsPerDay, setPostsPerDay] = useState('1')
   const [times, setTimes] = useState(['06:00', '12:00', '16:00', '21:00'])
   const [saved, setSaved] = useState(false)
 
@@ -76,7 +76,7 @@ export default function SchedulePage() {
             <div>
               <label style={{ fontSize: 11, color: 'var(--text2)', display: 'block', marginBottom: 8 }}>Posts per day</label>
               <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                {['2','4','6','8','12'].map(n => (
+                {['1','4','6','8','12'].map(n => (
                   <button key={n} onClick={() => setPostsPerDay(n)}
                     style={{ padding: '7px 16px', borderRadius: 7, border: 'none', fontSize: 13, cursor: 'pointer', fontWeight: postsPerDay === n ? 600 : 400,
                       background: postsPerDay === n ? 'var(--amber)' : 'var(--bg3)',

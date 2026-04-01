@@ -7,6 +7,7 @@ const NAV = [
   { href: '/dashboard/posts', label: 'Posts', icon: '✎' },
   { href: '/dashboard/schedule', label: 'Schedule', icon: '◷' },
   { href: '/dashboard/analytics', label: 'Analytics', icon: '◈' },
+  { href: '/dashboard/seo', label: 'SEO Audit', icon: '✦' },
   { href: '/dashboard/pipeline', label: 'AI Pipeline', icon: '⚙' },
   { href: '/dashboard/generate', label: 'Generate Now', icon: '⚡' },
   { href: '/dashboard/settings', label: 'Settings', icon: '≡' },
@@ -27,7 +28,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
         <nav style={{ padding: '12px 8px', flex: 1 }}>
           <div style={{ fontSize: 10, color: 'var(--text2)', textTransform: 'uppercase', letterSpacing: 1, padding: '8px 10px 4px', opacity: .5 }}>Main</div>
-          {NAV.slice(0, 4).map(item => (
+          {NAV.slice(0, 5).map(item => (
             <Link key={item.href} href={item.href} style={{ textDecoration: 'none' }}>
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 10,
@@ -43,7 +44,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           ))}
 
           <div style={{ fontSize: 10, color: 'var(--text2)', textTransform: 'uppercase', letterSpacing: 1, padding: '12px 10px 4px', opacity: .5 }}>AI Engine</div>
-          {NAV.slice(4).map(item => (
+          {NAV.slice(5).map(item => (
             <Link key={item.href} href={item.href} style={{ textDecoration: 'none' }}>
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 10,

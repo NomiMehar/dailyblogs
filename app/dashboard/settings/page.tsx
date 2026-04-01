@@ -13,7 +13,7 @@ export default function SettingsPage() {
     adsense: true, affiliate: true, emailCapture: true,
     schemaMarkup: true, openGraph: true, canonicalUrls: true, sitemapPing: true,
     googleTrends: true, reddit: true, hackernews: true, twitter: false,
-    postsPerDay: '4', minSeoScore: '85', wordCount: '3000',
+    postsPerDay: '1', minSeoScore: '85', wordCount: '3000',
     adsenseId: '', anthropicKey: '', siteName: '', siteUrl: '',
   })
   const [saved, setSaved] = useState(false)
@@ -99,7 +99,7 @@ export default function SettingsPage() {
             <Row label="Posts per day">
               <select value={settings.postsPerDay} onChange={e => set('postsPerDay', e.target.value)}
                 style={{ padding: '7px 10px', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 7, color: 'var(--text)', fontSize: 12, outline: 'none' }}>
-                {['2','4','6','8','12'].map(v => <option key={v} value={v}>{v} posts/day</option>)}
+                {['1','4','6','8','12'].map(v => <option key={v} value={v}>{v} posts/day</option>)}
               </select>
             </Row>
             <Row label="Min SEO score to publish">
@@ -157,11 +157,12 @@ export default function SettingsPage() {
           {/* API Status */}
           <Section title="Free API Status">
             {[
-              { name: 'Pollinations.ai (image gen)', status: 'active', note: 'Unlimited · No key needed' },
+              { name: 'Groq — Llama 3.3 70B (FREE)', status: settings.groqKey ? 'active' : 'needs_key', note: settings.groqKey ? 'Connected ✓' : 'Add GROQ_API_KEY (console.groq.com)' },
+              { name: 'OpenRouter (FREE tier)', status: settings.openrouterKey ? 'active' : 'needs_key', note: settings.openrouterKey ? 'Connected ✓' : 'Add OPENROUTER_API_KEY' },
+              { name: 'Anthropic Claude (paid)', status: settings.anthropicKey ? 'active' : 'needs_key', note: settings.anthropicKey ? 'Connected ✓' : 'Optional — add credits first' },
+              { name: 'Pollinations.ai (images)', status: 'active', note: 'Free · No key needed' },
               { name: 'Google Trends RSS', status: 'active', note: 'Free · No key needed' },
               { name: 'Reddit JSON API', status: 'active', note: '60 req/min free' },
-              { name: 'HackerNews Algolia', status: 'active', note: '10,000 req/hr free' },
-              { name: 'Anthropic Claude API', status: settings.anthropicKey ? 'active' : 'needs_key', note: settings.anthropicKey ? 'Connected' : 'Add API key above' },
             ].map(api => (
               <div key={api.name} style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid #ffffff06', fontSize: 12 }}>
                 <span style={{ color: 'var(--text2)' }}>{api.name}</span>
